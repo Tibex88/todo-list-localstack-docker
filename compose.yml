@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   mongo:
     image: mongo
@@ -18,5 +20,8 @@ services:
       - GATEWAY_LISTEN=0.0.0.0:4566
     volumes:
       - "./localstack:/docker-entrypoint-initaws.d"
+
+volumes:
+  mongo-data:
 
 
